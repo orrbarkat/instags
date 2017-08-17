@@ -3,7 +3,7 @@
 //# You can use CoffeeScript in this file: http://coffeescript.org/
 function uploadFile(file)
         {
-            alert(file.name);
+            alert(file.name+"send");
  	    var url = 'image';
             var xhr = new XMLHttpRequest();
             var fd = new FormData();
@@ -110,7 +110,7 @@ $(function ()
     {
         if (file.name!="")
         {
-            alert(file.size);
+            //alert(file.size);
             //send it to server
             //var uploadfiles = document.querySelector('#uploadfiles');
             //var file = uploadfiles.files;
