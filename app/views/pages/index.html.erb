@@ -6,19 +6,25 @@
  <main class="main">
      <div class="card cardTemplate weather-forecast">
 	<center>
-	 <div class="location">Add photo</div>
-		<label class="select-photo">
+	 <div class="title_add" id="title_add"><h2>Add photo</h2></div>
+	 <div class="title_tags" id="title_tags"style="display: none;" ><h2>Tags</h2> </div>
+		
+		<label id="select-photo" class="select-photo">
+			</br>
 			<label class="btn btn-primary btn-file">
-                	 Browse<input type="file" style="display: none;" multiple>
+                	 Browse<input type="file" style="display: none;">
 			</label>
 			<input type="text" class="form-control" readonly>           
                  </br>
              <button id="btn" name="btn1" class="btn btn-primary btn-sm comment">SEND</button>
                  </label>
                  <div id="gallery"></div>
-             </center>
-             </div>
+         <div id="results" class="results" style="display: none;">
+	 <div id="tags" class="alert alert-success" role="alert">Here will be tags</div>
+	
+	</div>	    
 
+	</center>
+    </div>
 
-
-             </main>
+</main>

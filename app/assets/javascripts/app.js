@@ -3,7 +3,7 @@
 //# You can use CoffeeScript in this file: http://coffeescript.org/
 function uploadFile(file)
         {
-            alert(file.name+"send");
+            //alert(file.name+"send");
  	    var url = 'image';
             var xhr = new XMLHttpRequest();
             var fd = new FormData();
@@ -14,7 +14,20 @@ function uploadFile(file)
                 {
                     // Every thing ok, file uploaded
                     console.log(xhr.responseText); // handle response.
-                }
+                
+		    var res = JSON.parse(xhr.responseText);
+		    var title_add=document.getElementById("title_add");
+		    var title_tags=document.getElementById("title_tags");
+		    var results = document.getElementById("results");
+		    var select_photo=document.getElementById("select-photo");
+		    var tags=document.getElementById("tags");
+		    //alert(res.file_name+" "+res.tags+" elemsnt: "+results.innerText);
+		    title_add.style.display='none';
+		    title_tags.style.display='';
+		    results.style.display='';
+		    select_photo.style.display='none';
+		    tags.innerText=res.tags;
+		}
             };
             fd.append("file", file);
             xhr.send(fd);

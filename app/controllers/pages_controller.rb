@@ -12,6 +12,6 @@ class PagesController < ApplicationController
     #image.resize "100x100"
     #pic = S3_BUCKET.object("#{params['id']}.#{params['version']}.jpg")
     #pic.put(body: file)
-    render json: "OK", status: :ok
+    render json: {"file_name": "3.png", "tags": "#banna #sea #friends"}, status: :ok
   end
 end
