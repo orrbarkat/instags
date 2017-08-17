@@ -10,5 +10,5 @@ ENV RAILS_ENV development
 ENV RACK_ENV development
 ADD . /myapp
 RUN bundle check || bundle install
-RUN rm ./tmp/pids/server.pid > /dev/null 2>&1
+RUN rm ./tmp/pids/server.pid > /dev/null 2>&1 || echo hey
 CMD ./bin/rails s -b 0.0.0.0
