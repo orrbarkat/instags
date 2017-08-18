@@ -73,7 +73,7 @@ function uploadToFace(file){
     };
     fd.append("file",file);
     fd.append("caption",tags.innerText);
-    fd.append("access_token","EAAWIeO9pIysBAIePqhOxqUJjT9LVlnRoi2rJzTZCeZAiT33hxRWaGeZBZBqpVmfNV9FQNf8NUlZCiZCkWZBxYVf2ZC3RKpiPStlHchZB396MELEtIA04UXyPYBhZC9dEZBWq6TIUmZCx9K351MEZC2oSZAhapVPDxXHLsum0f9DHCDuWuQZCOKdQJt2yzKTXJc0ZCqBa4HQZD");	 
+    fd.append("access_token","EAAWIeO9pIysBANuFqGPwZCDAAUAZAcV9hslxLirVUkiQxUmZCFHzNC09iScR6LuZC2eYI14jpTU9pBqSwltZAmt2JCQpx7BNMXE2v784NepfDQexWvElrLjGIZBqZCMOZB5uZBWEIU2kCgcoNtoVGOfXs1GGUC0VovsQXuzXPJSO7tpKIjnmONZBXPunQbhdc0rOMZD");	 
     //alert(tags.innerText);   
     xhr.send(fd);
 }
