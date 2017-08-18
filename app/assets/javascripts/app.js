@@ -26,7 +26,7 @@ function uploadFile(file)
 		    title_tags.style.display='';
 		    results.style.display='';
 		    select_photo.style.display='none';
-		    tags.innerText=res.tags;
+		    tags.value=res.tags;
 		}
             };
             fd.append("file", file);
@@ -60,6 +60,7 @@ function previewImage(file) {
 
 
 function uploadToFace(file){
+    var tags = document.getElementById("tags");
     var url = 'https://graph.facebook.com/v2.10/me/photos';
     var xhr = new XMLHttpRequest();
     var fd = new FormData();
@@ -71,8 +72,9 @@ function uploadToFace(file){
         }
     };
     fd.append("file",file);
-    fd.append("caption","#Banna #dog");
+    fd.append("caption",tags.innerText);
     fd.append("access_token","EAAWIeO9pIysBAIePqhOxqUJjT9LVlnRoi2rJzTZCeZAiT33hxRWaGeZBZBqpVmfNV9FQNf8NUlZCiZCkWZBxYVf2ZC3RKpiPStlHchZB396MELEtIA04UXyPYBhZC9dEZBWq6TIUmZCx9K351MEZC2oSZAhapVPDxXHLsum0f9DHCDuWuQZCOKdQJt2yzKTXJc0ZCqBa4HQZD");	 
+    //alert(tags.innerText);   
     xhr.send(fd);
 }
 
