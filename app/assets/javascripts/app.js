@@ -58,6 +58,24 @@ function previewImage(file) {
 }
 
 
+
+function uploadToFace(file){
+    var url = 'https://graph.facebook.com/v2.10/me/photos';
+    var xhr = new XMLHttpRequest();
+    var fd = new FormData();
+    xhr.open("POST", url, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // Every thing ok, file uploaded
+            console.log(xhr.responseText); // handle response.
+        }
+    };
+    fd.append("file",file);
+    fd.append("caption","#Banna #dog");
+    fd.append("access_token","EAAWIeO9pIysBAIePqhOxqUJjT9LVlnRoi2rJzTZCeZAiT33hxRWaGeZBZBqpVmfNV9FQNf8NUlZCiZCkWZBxYVf2ZC3RKpiPStlHchZB396MELEtIA04UXyPYBhZC9dEZBWq6TIUmZCx9K351MEZC2oSZAhapVPDxXHLsum0f9DHCDuWuQZCOKdQJt2yzKTXJc0ZCqBa4HQZD");	 
+    xhr.send(fd);
+}
+
 $(function ()
 {
     /*var uploadfiles = document.querySelector('#fileinput');
@@ -121,7 +139,10 @@ $(function ()
     });
     $("button").click(function ()
     {
-        if (file.name!="")
+        if($(this).attr('id')=="btn1"){
+	
+
+	if (file.name!="")
         {
             //alert(file.size);
             //send it to server
@@ -134,6 +155,10 @@ $(function ()
         {
             alert("No file was selected");
         }
+	}
+	else{
+		uploadToFace(file);
+	}
     });
 });
 
