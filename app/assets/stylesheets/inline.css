@@ -27,7 +27,13 @@ html, body {
   font-display: optional;
   color: #444;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale; 
+  background: url(/back.png) no-repeat center center fixed !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 html {
   overflow: hidden; }
@@ -57,6 +63,13 @@ body {
       -ms-flex-line-pack: stretch;
           align-content: stretch;
   background: #ececec; }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sedgwick Ave Display', cursive !important;
+  }
+  p, div {
+      font-family: 'Sedgwick Ave Display', cursive !important;
+  }
 
 .header {
   width: 100%;

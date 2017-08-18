@@ -1,12 +1,14 @@
+   <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
    <header class="header">
-    <h1 class="header__title">InsTags</h1>
+    <h1 class="header__title">#HashTagger</h1>
     <button id="butRefresh" class="headerButton" aria-label="Refresh"></button>
     <button id="butAdd" class="headerButton" aria-label="Add"></button>
 </header>
  <main class="main">
      <div class="card cardTemplate weather-forecast">
 	<center>
-	 <div class="title_add" id="title_add"><h2>Add photo</h2></div>
+	<img src="/InsTag.png" class="img-rounded" alt="Rounded Image" >
+	 <div class="title_add" id="title_add"><h2>Add Photo</h2></div>
 	 <div class="title_tags" id="title_tags"style="display: none;" ><h2>Tags</h2> </div>
 		
 		<label id="select-photo" class="select-photo">
@@ -14,16 +16,16 @@
 			<label class="btn btn-primary btn-file">
                 	 Browse<input type="file" style="display: none;">
 			</label>
+			</br></br>
 			<input type="text" class="form-control" readonly>           
                  </br>
-             <button id="btn1" name="btn1" class="btn btn-primary btn-sm comment">SEND</button>
+             <button id="btn1" name="btn1" class="btn btn-primary btn-sm comment"><div>SEND</div></button>
                  </label>
                  <div id="gallery"></div>
          <div id="results" class="results" style="display: none;">
 	 <input id="tags" class="alert alert-success input-lg" role="alert"></input></br>
 	<button id="btn2" name="btn2" class="btn btn-primary btn-sm comment">POST</button>	
 	</div>	    
-
 	</center>
     </div>
 
