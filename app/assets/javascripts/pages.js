@@ -1,7 +1,7 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
-function uploadFile(file)
+//# Place all the behaviors and hooks related to the matching controller here.
+//# All this logic will automatically be available in application.js.
+//# You can use CoffeeScript in this file: http://coffeescript.org/
+/*function uploadFile(file)
         {
             alert(file.name);
  	    var url = 'server/index.php';
@@ -24,7 +24,7 @@ function previewImage(file) {
     var galleryId = "gallery";
 
     var gallery = document.getElementById(galleryId);
-    var imageType = /image.*/;
+    var imageType = /image.*/ /*;
 
     if (!file.type.match(imageType)) {
         throw "File Type must be an image";
@@ -57,7 +57,7 @@ $(function ()
     }
 
     }, false); ;*/
-
+/*
     var file=new Image();
     // We can attach the `fileselect` event to all file inputs on the page
     $(document).on('change', ':file', function ()
@@ -85,7 +85,7 @@ $(function ()
         }
         }, false);*/
 
-
+/*
     });
 
     // We can watch for our custom `fileselect` event like this
@@ -123,5 +123,5 @@ $(function ()
             alert("No file was selected");
         }
     });
-});
+});*/
 
