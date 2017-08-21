@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'serviceworker-rails'
-#gem "mini_magick"
+gem "mini_magick"
 #cross site reqs
 gem 'rack-cors', :require => 'rack/cors'
 

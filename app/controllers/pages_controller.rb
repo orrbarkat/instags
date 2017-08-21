@@ -1,20 +1,31 @@
 class PagesController < ApplicationController
+  PATH_img = File.join('..','net','tmp.png')
+  PATH_res = File.join('..','net','results.txt')
 
   def index
   end
-  
+
 
   def image
     file = params['file']
+    File.delete(PATH_res) if File.file? PATH_res
     puts file.tempfile.path
-   # image = MiniMagick::Image.new(file.tempfile.path)
-    #image.format "png":
-    #image.resize "100x100"
-    #pic = S3_BUCKET.object("#{params['id']}.#{params['version']}.jpg")
-    #pic.put(body: file)
-    render json: {"file_name": "3.png", "tags": "#banna #sea #friends"}, status: :ok
+    image = MiniMagick::Image.new(file.tempfile.path)
+    image.format "png"
+    image.resize "320x320"
+    image.write(PATH_img)
+    data = {tags: "#error #bad_programs #shithappens"}
+    5.times do
+      if File.exist? PATH_res
+         data =  File.read(PATH_res)
+         break
+       else
+          sleep(5)
+        end
+    end
+    render json: {"tags": data}  , status: :ok
   end
-  
+
   def Tofacebook
  	require 'net/http'
 	require 'uri'
@@ -37,7 +48,7 @@ class PagesController < ApplicationController
 	render json: "OK", status: :ok
 	# response.code
 	# response.body
-  end 
+  end
 
 
 end

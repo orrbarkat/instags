@@ -14,7 +14,7 @@ function uploadFile(file)
                 {
                     // Every thing ok, file uploaded
                     console.log(xhr.responseText); // handle response.
-                
+
 		    var res = JSON.parse(xhr.responseText);
 		    var title_add=document.getElementById("title_add");
 		    var title_tags=document.getElementById("title_tags");
@@ -69,12 +69,14 @@ function uploadToFace(file){
         if (xhr.readyState == 4 && xhr.status == 200) {
             // Every thing ok, file uploaded
             console.log(xhr.responseText); // handle response.
+            alert("Go to Facebook, It worth it");
+            location.reload();
         }
     };
     fd.append("file",file);
-    fd.append("caption",tags.innerText);
-    fd.append("access_token","EAAWIeO9pIysBANuFqGPwZCDAAUAZAcV9hslxLirVUkiQxUmZCFHzNC09iScR6LuZC2eYI14jpTU9pBqSwltZAmt2JCQpx7BNMXE2v784NepfDQexWvElrLjGIZBqZCMOZB5uZBWEIU2kCgcoNtoVGOfXs1GGUC0VovsQXuzXPJSO7tpKIjnmONZBXPunQbhdc0rOMZD");	 
-    //alert(tags.innerText);   
+    fd.append("caption",tags.value);
+    fd.append("access_token","EAAWIeO9pIysBAGNPsH0S694w7awCVOAC0gV9tXSrbbZB6ak6ZCjyOwqC14rUvRAvYIkhnaBaG4Ush8xtvQrdukDZCyG3F8QyaTSYZBmau6HB4jfH8Y7FMRlJNgwVWqSQgFwlImm7g3fnBlsZAwuaAIE8XF2KylVAsSJINn4piXgZDZD");
+    //alert(tags.innerText);
     xhr.send(fd);
 }
 
@@ -142,7 +144,7 @@ $(function ()
     $("button").click(function ()
     {
         if($(this).attr('id')=="btn1"){
-	
+
 
 	if (file.name!="")
         {
@@ -151,7 +153,7 @@ $(function ()
             //var uploadfiles = document.querySelector('#uploadfiles');
             //var file = uploadfiles.files;
             uploadFile(file); // call the function to upload the file
-            
+
         }
         else
         {
@@ -163,4 +165,3 @@ $(function ()
 	}
     });
 });
-
